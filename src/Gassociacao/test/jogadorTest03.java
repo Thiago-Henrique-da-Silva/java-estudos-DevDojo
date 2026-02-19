@@ -8,23 +8,21 @@ public class jogadorTest03 {
         Jogador jogador1 = new Jogador("Jose");
         Jogador jogador2 = new Jogador("Maria Alice");
         Jogador jogador3 = new Jogador("Thiago");
-        Time time = new Time("brasil");
+        Time time = new Time("Brasil");
 
-        Jogador[] jogadores = {jogador1,jogador2,jogador3};
+        Jogador[] jogadores = {jogador1, jogador2, jogador3};
 
-        //define o time ao qual este jogador pertence.
+        // Associação: define o time de cada jogador
         jogador1.setTime(time);
         jogador2.setTime(time);
         jogador3.setTime(time);
 
-        //define a lista de jogadores que fazem arte deste time.
+        // Associação: define todos os jogadores que pertencem a este time
         time.setJogadores(jogadores);
 
         System.out.println("--- jogador ---");
-        jogador1.imprime();
+        jogador1.imprime(); // Exibe dados do jogador e seu time
         System.out.println("--- time ---");
-        time.imprime();
-
-
     }
 }
+

@@ -7,6 +7,7 @@ public class animeTest01 {
         Anime anime = new Anime();
         anime.init("Nanatsu no taizai", "Ação", 21);
         anime.imprimir();
-
     }
 }
+
+

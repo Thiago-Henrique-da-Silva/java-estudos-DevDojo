@@ -2,8 +2,8 @@ package Gassociacao.dominio;
 
 public class Seminario {
     private String titulo;
-    private Aluno[] alunos;
-    private Local local;
+    private Aluno[] alunos; // Associação: um Seminário pode ter vários Alunos
+    private Local local; // Associação: um Seminário ocorre em um Local
 
     public Seminario(String titulo) {
         this.titulo = titulo;
@@ -39,3 +39,5 @@ public class Seminario {
         this.local = local;
     }
 }
+
+

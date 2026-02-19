@@ -3,7 +3,7 @@ package Gassociacao.dominio;
 public class Professor {
     private String nome;
     private String especialidade;
-    private Seminario[] seminarios;
+    private Seminario[] seminarios; // Associação: cada Professor pode ter vários Seminários
 
     public Professor(String nome,String especialidade) {
         this.nome = nome;
@@ -16,24 +16,21 @@ public class Professor {
         this.seminarios = seminarios;
     }
 
-
     public void imprime() {
         System.out.println("------");
         System.out.println("professor: " + this.nome);
         System.out.println("------");
         System.out.println("seminarios");
-        if (this.seminarios == null) return;
+        if (this.seminarios == null) return; // Verifica se o professor tem seminários
         for (Seminario seminario : this.seminarios) {
             System.out.println("titulo: "+ seminario.getTitulo());
-            if (seminario.getLocal() == null) continue;
+            if (seminario.getLocal() == null) continue; // Verifica se há Local associado
             System.out.println("endereço: "+ seminario.getLocal().getEndereco());
-            if (seminario.getAlunos() == null) continue;
+            if (seminario.getAlunos() == null) continue; // Verifica se há alunos
             System.out.println("** alunos **");
             for (Aluno aluno : seminario.getAlunos()) {
                 System.out.println("nome: "+ aluno.getNome()+ " idade: "+ aluno.getIdade());
-
             }
-
         }
     }
 

@@ -8,10 +8,12 @@ public class jogadorTest01 {
         Jogador jogador2 = new Jogador("Thiago");
         Jogador jogador3 = new Jogador("Cassiana");
 
-        Jogador[] jogadores = {jogador1, jogador2, jogador3};
+        Jogador[] jogadores = {jogador1, jogador2, jogador3}; // Array de objetos: exemplo de associação
 
-        for (Jogador jogador : jogadores) {
-            jogador.imprime();
+        for (Jogador jogador : jogadores) { // Percorre todos os jogadores
+            jogador.imprime(); // Mostra dados do jogador
         }
     }
 }
+
+

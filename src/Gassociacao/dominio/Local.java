@@ -2,7 +2,7 @@ package Gassociacao.dominio;
 
 public class Local {
     private String endereco;
-    private Seminario[] seminarios;
+    private Seminario[] seminarios; // Associação: cada Local pode ter vários Seminários
 
     public Local(String endereco) {
         this.endereco = endereco;
@@ -16,3 +16,5 @@ public class Local {
         this.endereco = endereco;
     }
 }
+
+

@@ -3,7 +3,7 @@ package Gassociacao.dominio;
 public class Aluno {
     private String nome;
     private int idade;
-    private Seminario seminario;
+    private Seminario seminario; // Associação: cada Aluno pode estar ligado a um Seminario
 
     public Aluno(String nome, int idade) {
         this.nome = nome;
@@ -34,3 +34,4 @@ public class Aluno {
         this.seminario = seminario;
     }
 }
+

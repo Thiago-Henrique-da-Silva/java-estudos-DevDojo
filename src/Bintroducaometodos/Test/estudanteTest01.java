@@ -7,7 +7,7 @@ public class estudanteTest01 {
     public static void main(String[] args) {
         Estudante estudante01 = new Estudante();
         Estudante estudante02 = new Estudante();
-        impressoraEstudante impressora = new impressoraEstudante();
+        impressoraEstudante impressora = new impressoraEstudante(); // Cria objeto responsável por imprimir estudantes
 
         estudante01.nome = "Midoriya";
         estudante01.idade = 15;
@@ -17,11 +17,10 @@ public class estudanteTest01 {
         estudante02.idade = 16;
         estudante02.sexo = 'F';
 
-        impressora.imprime(estudante01);
+        impressora.imprime(estudante01); // Passa objeto para o método da impressora
         System.out.println("-----");
-        impressora.imprime(estudante02);
-
-        
+        impressora.imprime(estudante02); // Passa outro objeto
     }
-    
 }
+
+

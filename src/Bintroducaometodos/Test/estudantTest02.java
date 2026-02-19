@@ -1,7 +1,6 @@
 package Bintroducaometodos.Test;
 
 import Bintroducaometodos.dominio.Estudante;
-import Bintroducaometodos.dominio.impressoraEstudante;
 
 public class estudantTest02 {
     public static void main(String[] args) {
@@ -20,5 +19,6 @@ public class estudantTest02 {
         System.out.println("-----");
         estudante02.imprime();
     }
-    
 }
+
+

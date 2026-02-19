@@ -6,15 +6,12 @@ public class Estudante {
     public int idade;
     public char sexo;
 
-
-public void imprime(){
-
-
-    //estudanteTest02
-    //"this" referencia o proprio objeto. "esse" em portugues.
-    System.out.println(this.nome);
-    System.out.println(this.idade);
-    System.out.println(this.sexo);
+    // Método que exibe os atributos do próprio objeto
+    public void imprime() {
+        // 'this' refere-se ao objeto atual, garantindo que acessamos os atributos deste objeto
+        System.out.println(this.nome);
+        System.out.println(this.idade);
+        System.out.println(this.sexo);
+    }
 }
 
-}

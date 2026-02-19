@@ -1,10 +1,11 @@
 package Eblocosdeinicializacao.test;
 
-import Eblocosdeinicializacao.dominio.Anime;
+import Eblocosdeinicializacao.dominio.Anime; // Importa anime
 
-public class animeTest {
-    public static void main(String[] args) {
-        Anime anime1 = new Anime("Naruto");
-        Anime anime = new Anime();
+public class animeTest { // Classe teste
+    public static void main(String[] args) { // Método principal
+        Anime anime1 = new Anime("Naruto"); // Cria anime com nome
+        Anime anime = new Anime(); // Cria anime vazio
     }
 }
+

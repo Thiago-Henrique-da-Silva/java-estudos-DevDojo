@@ -7,31 +7,22 @@ import Gassociacao.dominio.Seminario;
 
 public class seminarioTest {
     public static void main(String[] args) {
-        // criação
         Local local = new Local("Santa Maria");
         Aluno aluno = new Aluno("Joice Martins", 21);
         Aluno[] alunos = {aluno};
         Professor professor = new Professor("Thiago H", "programador");
-        //vinculando aluno e local
-        //atribuir alunos e local ao seminario assim.
-        Seminario seminario = new Seminario("onde achar one piece", alunos, local);
-        //ou atribuir alunos ao seminnario assim.
+
+        // Associação: cria um seminário com alunos e local
+        Seminario seminario = new Seminario("Onde achar One Piece", alunos, local);
+
+        // Associação: vincula alunos ao seminário (pode ser redefinido depois)
         seminario.setAluno(alunos);
-        Seminario[] seminarios ={seminario};
+
+        // Associação: professor ministra este seminário
+        Seminario[] seminarios = {seminario};
         professor.setSeminario(seminarios);
 
-
+        // Exibe dados do professor, seminário, alunos e local
         professor.imprime();
-
-
-
-
-
-
-
-
-
-
-
     }
 }

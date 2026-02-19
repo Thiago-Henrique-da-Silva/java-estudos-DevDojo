@@ -1,33 +1,33 @@
 package Bintroducaometodos.dominio;
 
-public class Pessoa {
-    private String nome;
-    private int idade;
+public class Pessoa { // Classe que representa uma pessoa com atributos privados
 
-    public void imprime(){
+    private String nome; // Encapsulamento: atributo privado
+    private int idade; // Encapsulamento: atributo privado
+
+    // Método que imprime os atributos do objeto
+    public void imprime() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
     }
-// GET:metodo usado para pegar um valor de um atributo privado
-    public void setNome(String nome){
+
+    // Setter do nome
+    public void setNome(String nome) {
         this.nome = nome;
     }
-// SET:metodo usado para retornar/ler um valor de um atributo privado
-    public void setIdade(int idade){
-        if (idade < 0){
-            System.out.println("Idade negativo");
-            return;
+
+    // Setter da idade com validação
+    public void setIdade(int idade) {
+        if (idade < 0) { // Valida se a idade é negativa
+            System.out.println("Idade negativa não permitida"); // Mostra aviso de erro
+            return; // Sai do método sem alterar o atributo
         }
-        this.idade = idade;
+        this.idade = idade; // Define a idade se for válida
     }
 
-    public String getNome(){
-        return this.nome;
-    }
-    public int getIdade(){
-        return this.idade;
-    }
-
-
-
+    // Getters
+    public String getNome() { return this.nome; }
+    public int getIdade() { return this.idade; }
 }
+
+

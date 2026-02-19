@@ -1,18 +1,18 @@
 package Bintroducaometodos.Test;
 
-import Bintroducaometodos.dominio.Calculadora;
+import Bintroducaometodos.dominio.Calculadora; // Importa a classe Calculadora do pacote de domínio
 
 public class calculadoraTest01 {
     public static void main(String[] args) {
-        Calculadora calculadora = new Calculadora();
-        calculadora.somaDoisNumeros();
+        Calculadora calculadora = new Calculadora(); // Cria objeto da classe Calculadora
 
-        System.out.println("finalizando 'calculadoraTest01'");
+        calculadora.somaDoisNumeros(); // Chama o método que soma dois números (método definido na classe Calculadora)
 
-        calculadora.subtrairDoisNumeros();
+        System.out.println("finalizando 'calculadoraTest01'"); // Indica fim da execução de um passo
 
-        System.out.println("finalizando 'calculadora Test01");
-        
+        calculadora.subtrairDoisNumeros(); // Chama o método que subtrai dois números
+
+        System.out.println("finalizando 'calculadoraTest01'"); // Indica fim do teste
     }
-    
 }
+

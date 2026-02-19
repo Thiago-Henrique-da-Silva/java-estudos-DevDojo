@@ -5,21 +5,23 @@ public class Anime {
     private String tipo;
     private int episodios;
     private String genero;
-    private String estudio;
+    private String estudio; // Novo atributo para guardar o estúdio do anime
 
-    public Anime(String nome, String tipo, int episodios, String genero ) {
+    // Construtor completo
+    public Anime(String nome, String tipo, int episodios, String genero) {
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
         this.genero = genero;
     }
 
-    public Anime(String nome, String tipo, int episodios, String genero, String  estudio ) {
-        this(nome, tipo, episodios, genero);
-        this.estudio = estudio;
+    // Sobrecarga de construtor com estúdio
+    public Anime(String nome, String tipo, int episodios, String genero, String estudio) {
+        this(nome, tipo, episodios, genero); // Reuso do outro construtor (chamada a outro construtor)
+        this.estudio = estudio; // Define estúdio
     }
 
-    public Anime(){}
+    public Anime(){} // Construtor vazio
 
     public void imprimir(){
         System.out.println(this.nome);
@@ -28,35 +30,17 @@ public class Anime {
         System.out.println(this.genero);
     }
 
-    public String getGenero() {
-        return genero;
-    }
+    // Getters e Setters padrão
+    public String getGenero() { return genero; }
+    public void setGenero(String genero) { this.genero = genero; }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getNome() { return nome; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public void setTipo(String tipo){ this.tipo = tipo; }
+    public String getTipo(){ return tipo; }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setTipo(String tipo){
-        this.tipo = tipo;
-    }
-
-    public String getTipo(){
-        return tipo;
-    }
-
-    public void setEpisodios(int episodios){
-        this.episodios = episodios;
-    }
-
-    public int getEpisodios(){
-        return episodios;
-    }
+    public void setEpisodios(int episodios){ this.episodios = episodios; }
+    public int getEpisodios(){ return episodios; }
 }
+

@@ -6,53 +6,38 @@ public class Anime {
     private int episodios;
     private String genero;
 
-    public void init(String nome, String tipo, int episodios ) {
+    // Método init básico: conceito de "método de inicialização" (sem usar construtor)
+    public void init(String nome, String tipo, int episodios) {
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
     }
 
+    // Sobrecarga de método init: permite inicializar com mais atributos
     public void init(String nome, String tipo, int episodios, String genero) {
-        this.init(nome, tipo, episodios);
+        this.init(nome, tipo, episodios); // Reuso do método init básico
         this.genero = genero;
     }
 
-    public void imprimir(){
+    public void imprimir() {
         System.out.println(this.nome);
         System.out.println(this.tipo);
         System.out.println(this.episodios);
         System.out.println(this.genero);
     }
 
-    public String getGenero() {
-        return genero;
-    }
+    // Getters e Setters padrões
+    public String getGenero() { return genero; }
+    public void setGenero(String genero) { this.genero = genero; }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getNome() { return nome; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public void setTipo(String tipo){ this.tipo = tipo; }
+    public String getTipo(){ return tipo; }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setTipo(String tipo){
-        this.tipo = tipo;
-    }
-
-    public String getTipo(){
-        return tipo;
-    }
-
-    public void setEpisodios(int episodios){
-        this.episodios = episodios;
-    }
-
-    public int getEpisodios(){
-        return episodios;
-    }
+    public void setEpisodios(int episodios){ this.episodios = episodios; }
+    public int getEpisodios(){ return episodios; }
 }
+
+

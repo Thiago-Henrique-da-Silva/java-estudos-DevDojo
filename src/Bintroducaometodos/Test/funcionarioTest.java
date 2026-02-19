@@ -10,6 +10,6 @@ public class funcionarioTest {
         funcionario1.setSalarios(new double[]{2200, 2341, 3459});
         funcionario1.imprimir();
         funcionario1.imprimeMediaSalarial();
-
     }
 }
+

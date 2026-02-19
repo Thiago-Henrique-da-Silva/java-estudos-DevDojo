@@ -2,18 +2,18 @@ package Gassociacao.dominio;
 
 public class Escola {
     private String nome;
-    private Professo[] professores;
+    private Professo[] professores; // Associação: cada Escola possui um array de Professores
 
     public void imprime(){
         System.out.println("Nome: " + this.nome);
         if (professores == null) return;
-        for (Professo professor : professores){
+        for (Professo professor : professores){ // Percorre todos os professores associados
             System.out.println(professor.getNome());
         }
     }
 
-    //professores so entra se estiver professor disponivel,no caso criamos um no escolaTest
-    public Escola(String nome,  Professo[] professores) {
+    // Construtor com associação a professores
+    public Escola(String nome, Professo[] professores) {
         this.nome = nome;
         this.professores = professores;
     }
@@ -34,3 +34,4 @@ public class Escola {
         this.professores = professores;
     }
 }
+
